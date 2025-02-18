@@ -7,6 +7,21 @@ Este projeto implementa a leitura de um joystick analógico utilizando o convers
 O vídeo com a execução da simulação pode ser acessado em:
 [🔗 Link para o vídeo](https://www.youtube.com/watch?v=Dv59X2cIaaQ&ab_channel=LorenzoBaroni)
 
+## 🔧 🔴 PARA FUNCIONAR NA BITDOGLAB É NECESSARIO FAZER ALGUMAS ALTERAÇÕES NO CODIGO.
+O código está funcionando perfeitamente no simulador wokwi e a BitDogLab possui o 'x' e o 'y' do Joystick invertido. Caso queira implementar o codigo na BitDogLab é só fazer essas inversões e deixar da seguinte forma:
+
+
+- Altere as GPIO'S nas linhas 13 e 14, conforme a imagem:
+  .![](BitDogLab/gpio.png)
+
+
+- Altere os ```adc_select_input();``` nas linhas 7 e 11, conforme a imagem: ![](BitDogLab/adc.png)
+
+
+- Altere a variavel ```pos_x``` na linha 133, conforme a imagem: ![](BitDogLab/pos_x.png)
+
+- Com isso irá funcionar perfeitamente, caso voce queria implementar em uma BitDogLab. OBS:. Essas imagens tambem estão presentes na pasta BitDogLab do repositório.
+
 ## 🎯 Objetivos
 ✔️ Compreender o funcionamento do **Conversor Analógico-Digital (ADC)** no RP2040.  
 ✔️ Utilizar **PWM** para controlar a intensidade de LEDs RGB com base nos valores do joystick.  
@@ -46,8 +61,10 @@ git clone https://github.com/lorenzobaroni/adc_pwm
 ### 2️⃣ Configurar o ambiente
 Certifique-se de que o **Pico SDK** está configurado corretamente e que você tem o **CMake** instalado.
 
+### 3️⃣ Faça a alteração no código.
+Modifique o código como está sendo mostrado no inicio do README ou segundo as imagens presentes na pasta BitDogLab.
 
-### 3️⃣ Compilar e Executar
+### 4️⃣ Compilar e Executar
 Compile no VS Code e implemente o codigo na sua BitDogLab.
 
 ## 📝 Licença
