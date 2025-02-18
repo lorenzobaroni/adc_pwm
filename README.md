@@ -5,7 +5,7 @@ Este projeto implementa a leitura de um joystick analógico utilizando o convers
 
 ## 🎥 Demonstração
 O vídeo com a execução da simulação pode ser acessado em:
-[🔗 Link para o vídeo]()
+[🔗 Link para o vídeo](https://www.youtube.com/watch?v=Dv59X2cIaaQ&ab_channel=LorenzoBaroni)
 
 ## 🎯 Objetivos
 ✔️ Compreender o funcionamento do **Conversor Analógico-Digital (ADC)** no RP2040.  
