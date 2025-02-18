@@ -10,8 +10,8 @@
 #define I2C_SCL 15
 #define DISPLAY_ADDR 0x3C 
 
-#define JOYSTICK_X_PIN 27 
-#define JOYSTICK_Y_PIN 26 
+#define JOYSTICK_X_PIN 26 
+#define JOYSTICK_Y_PIN 27 
 #define JOYSTICK_PB 22
 
 #define BUTTON_A 5        
@@ -104,11 +104,11 @@ int main() {
     uint16_t adc_x, adc_y;
     while (true) {
         // Leitura do eixo X do joystick
-        adc_select_input(1);
+        adc_select_input(0);
         adc_x = adc_read();
 
         // Leitura do eixo Y do joystick
-        adc_select_input(0);
+        adc_select_input(1);
         adc_y = adc_read();
 
         // Calcula os valores de PWM para controle dos LEDs, dependendo da posição do joystick
@@ -130,7 +130,7 @@ int main() {
         }
 
         // Converte os valores do joystick para coordenadas do display OLED
-        uint8_t pos_x = (adc_x * (WIDTH - 8)) / 4095;
+        uint8_t pos_x = ((4095 - adc_x) * (WIDTH - 8)) / 4095;
         uint8_t pos_y = ((4095 - adc_y) * (HEIGHT - 8)) / 4095;
 
         // Atualiza o display OLED
