@@ -15,7 +15,7 @@ O código está funcionando perfeitamente no simulador wokwi e a BitDogLab possu
   .![](BitDogLab/gpio.png)
 
 
-- Altere os ```adc_select_input();``` nas linhas 7 e 11, conforme a imagem: ![](BitDogLab/adc.png)
+- Altere os ```adc_select_input();``` nas linhas 107 e 111, conforme a imagem: ![](BitDogLab/adc.png)
 
 
 - Altere a variavel ```pos_x``` na linha 133, conforme a imagem: ![](BitDogLab/pos_x.png)
